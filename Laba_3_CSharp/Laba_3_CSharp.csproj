@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Calculations.cs" />
     <Compile Include="Code\Program.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>

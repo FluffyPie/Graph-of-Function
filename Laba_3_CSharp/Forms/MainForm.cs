@@ -15,13 +15,35 @@ namespace Laba_3_CSharp.Forms
         public MainForm()
         {
             InitializeComponent();
-            chart1.ChartAreas[0].AxisX.ScaleView.Zoom(0, 50);
-            chart1.ChartAreas[0].CursorX.IsUserEnabled = true;
-            chart1.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
-            chart1.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
-            chart1.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
-            for (int i = 0; i < 50; i++)
-                chart1.Series[0].Points.AddXY(i, Math.Sin(i));
+     
+            MainChartWindow.ChartAreas[0].CursorX.IsUserEnabled = true;
+            MainChartWindow.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+            MainChartWindow.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+            MainChartWindow.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
+            trackBar1.Maximum = 10000;
+            
+           
+        }
+        Code.Calculations Calculations = new Code.Calculations();
+        
+        private void ValueChanged(object sender, EventArgs e)
+        {
+
+            MainChartWindow.Series[0].Points.Clear();
+            MainChartWindow.Series[1].Points.Clear();
+            MainChartWindow.Series[2].Points.Clear();
+            double Radius = 1;
+            double x = Convert.ToDouble(trackBar1.Value)/1000;
+            for (double t = 0; t < x; t += 0.1)
+            {
+                MainChartWindow.Series[0].Points.AddXY(Calculations.AxisXCalculation(t, Radius), Calculations.AxisYCalculation(t, Radius));
+            }
+            for (double t = 0; t < 2 * Math.PI; t += 0.1)
+            {
+                MainChartWindow.Series[1].Points.AddXY(x + Math.Cos(t), Math.Sin(t) + 1);
+            }
+            MainChartWindow.Series[2].Points.AddXY(x - Math.Sin(x), 1 - Math.Cos(x));
+           
         }
     }
 }

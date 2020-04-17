@@ -15,12 +15,16 @@ namespace Laba_3_CSharp.Forms
         public MainForm()
         {
             InitializeComponent();
-           
+            this.Height = 500;
             double Radius = Convert.ToDouble(RadiusUpDownValue.Value);
             MainChartWindow.ChartAreas[0].AxisX.ScaleView.Size = Radius * 5.5;
             MainChartWindow.ChartAreas[0].AxisY.ScaleView.Size = Radius * 4;
+            MainChartWindow.ChartAreas[0].AxisX.LabelStyle.Format = "0.0";
+            MainChartWindow.ChartAreas[0].AxisY.LabelStyle.Format = "0.0";
             DrawAGraph();
+   
             
+
         }
 
         Code.Calculations Calculations = new Code.Calculations();
@@ -57,22 +61,60 @@ namespace Laba_3_CSharp.Forms
         private void RadiusValueChanged(object sender, EventArgs e)
         {
             DrawAGraph();
+            TableOfValues.Rows.Clear();
+            CreateTable();
         }
 
         private void LeftXValueChanged(object sender, EventArgs e)
         {
             double Radius = Convert.ToDouble(RadiusUpDownValue.Value);
             double XLeft = Convert.ToDouble(XLeftUpDownValue.Value);
-            MainChartWindow.ChartAreas[0].AxisX.ScaleView.Scroll(XLeft-Radius*10);
+            MainChartWindow.ChartAreas[0].AxisX.ScaleView.Scroll(XLeft-Radius*10000);
             DrawAGraph();
+            TableOfValues.Rows.Clear();
+            CreateTable();
         }
 
         private void RightXValueChanged(object sender, EventArgs e)
         {
             double Radius = Convert.ToDouble(RadiusUpDownValue.Value);
             double XRight= Convert.ToDouble(XRightUpDownValue.Value);
-            MainChartWindow.ChartAreas[0].AxisX.ScaleView.Scroll(XRight+Radius*10);
+            MainChartWindow.ChartAreas[0].AxisX.ScaleView.Scroll(XRight+Radius*10000);
             DrawAGraph();
+            TableOfValues.Rows.Clear();
+            CreateTable();
+        }
+
+        private void TableButton_Click(object sender, EventArgs e)
+        {
+            this.Height = 800;
+            TableButton.Visible = false;
+            HideTableButton.Visible = true;
+        }
+
+        private void HideTableButton_Click(object sender, EventArgs e)
+        {
+            this.Height = 500;
+            TableButton.Visible = true;
+            HideTableButton.Visible = false;
+        }
+        private void CreateTable()
+        {
+            
+            double Radius = Convert.ToDouble(RadiusUpDownValue.Value);
+            double XRight = Convert.ToDouble(XRightUpDownValue.Value);
+            double XLeft = Convert.ToDouble(XLeftUpDownValue.Value);
+            double XStep = Convert.ToDouble(StepXUpDown.Value);
+            for (double i = XLeft; i<=XRight; i += XStep)
+            {
+                TableOfValues.Rows.Add(Calculations.AxisXCalculation(i, Radius), Calculations.AxisYCalculation(i, Radius));
+            }
+        }
+
+        private void StepValuesChanged(object sender, EventArgs e)
+        {
+            TableOfValues.Rows.Clear();
+            CreateTable();
         }
     }  
 }

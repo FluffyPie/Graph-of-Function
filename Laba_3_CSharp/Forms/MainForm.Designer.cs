@@ -43,14 +43,20 @@
             this.RightXLabel = new System.Windows.Forms.Label();
             this.RadiusLabel = new System.Windows.Forms.Label();
             this.StepLabel = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.StepXUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MainWindowForm = new Guna.UI.WinForms.GunaElipse(this.components);
             this.TableButton = new System.Windows.Forms.Button();
+            this.HideTableButton = new System.Windows.Forms.Button();
+            this.DragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.TableOfValues = new System.Windows.Forms.DataGridView();
+            this.ColumnX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.MainChartWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadiusUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XRightUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XLeftUpDownValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StepXUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableOfValues)).BeginInit();
             this.SuspendLayout();
             // 
             // MainChartWindow
@@ -59,7 +65,7 @@
             this.MainChartWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             chartArea1.Name = "ChartArea";
             this.MainChartWindow.ChartAreas.Add(chartArea1);
-            this.MainChartWindow.Location = new System.Drawing.Point(-7, 39);
+            this.MainChartWindow.Location = new System.Drawing.Point(-16, 39);
             this.MainChartWindow.Name = "MainChartWindow";
             series1.ChartArea = "ChartArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -97,6 +103,11 @@
             // RadiusUpDownValue
             // 
             this.RadiusUpDownValue.DecimalPlaces = 2;
+            this.RadiusUpDownValue.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.RadiusUpDownValue.Location = new System.Drawing.Point(629, 196);
             this.RadiusUpDownValue.Minimum = new decimal(new int[] {
             1,
@@ -191,47 +202,103 @@
             this.StepLabel.TabIndex = 12;
             this.StepLabel.Text = "Step of X";
             // 
-            // numericUpDown1
+            // StepXUpDown
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(629, 248);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.StepXUpDown.DecimalPlaces = 2;
+            this.StepXUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.StepXUpDown.Location = new System.Drawing.Point(629, 248);
+            this.StepXUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.StepXUpDown.Name = "StepXUpDown";
+            this.StepXUpDown.Size = new System.Drawing.Size(97, 20);
+            this.StepXUpDown.TabIndex = 11;
+            this.StepXUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(97, 20);
-            this.numericUpDown1.TabIndex = 11;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.StepXUpDown.ValueChanged += new System.EventHandler(this.StepValuesChanged);
             // 
-            // gunaElipse1
+            // MainWindowForm
             // 
-            this.gunaElipse1.Radius = 25;
-            this.gunaElipse1.TargetControl = this;
+            this.MainWindowForm.Radius = 25;
+            this.MainWindowForm.TargetControl = this;
             // 
             // TableButton
             // 
-            this.TableButton.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TableButton.Location = new System.Drawing.Point(610, 419);
+            this.TableButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TableButton.Location = new System.Drawing.Point(611, 421);
             this.TableButton.Name = "TableButton";
             this.TableButton.Size = new System.Drawing.Size(141, 45);
             this.TableButton.TabIndex = 13;
-            this.TableButton.Text = "button1";
+            this.TableButton.Text = "Show the Table of Values";
+            this.TableButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TableButton.UseVisualStyleBackColor = true;
+            this.TableButton.Click += new System.EventHandler(this.TableButton_Click);
+            // 
+            // HideTableButton
+            // 
+            this.HideTableButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HideTableButton.Location = new System.Drawing.Point(611, 421);
+            this.HideTableButton.Name = "HideTableButton";
+            this.HideTableButton.Size = new System.Drawing.Size(141, 45);
+            this.HideTableButton.TabIndex = 14;
+            this.HideTableButton.Text = "Hide the Table of Values";
+            this.HideTableButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.HideTableButton.UseVisualStyleBackColor = true;
+            this.HideTableButton.Visible = false;
+            this.HideTableButton.Click += new System.EventHandler(this.HideTableButton_Click);
+            // 
+            // DragControl
+            // 
+            this.DragControl.TargetControl = this;
+            // 
+            // TableOfValues
+            // 
+            this.TableOfValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableOfValues.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnX,
+            this.ColumnY});
+            this.TableOfValues.Location = new System.Drawing.Point(12, 515);
+            this.TableOfValues.Name = "TableOfValues";
+            this.TableOfValues.ReadOnly = true;
+            this.TableOfValues.RowTemplate.DefaultCellStyle.Format = "N2";
+            this.TableOfValues.RowTemplate.DefaultCellStyle.NullValue = null;
+            this.TableOfValues.Size = new System.Drawing.Size(745, 273);
+            this.TableOfValues.TabIndex = 2;
+            // 
+            // ColumnX
+            // 
+            this.ColumnX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnX.HeaderText = "Value X";
+            this.ColumnX.Name = "ColumnX";
+            this.ColumnX.ReadOnly = true;
+            // 
+            // ColumnY
+            // 
+            this.ColumnY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnY.HeaderText = "Value Y";
+            this.ColumnY.Name = "ColumnY";
+            this.ColumnY.ReadOnly = true;
+            this.ColumnY.ToolTipText = "Value of Y";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 508);
+            this.ClientSize = new System.Drawing.Size(769, 800);
+            this.Controls.Add(this.TableOfValues);
+            this.Controls.Add(this.HideTableButton);
             this.Controls.Add(this.TableButton);
             this.Controls.Add(this.StepLabel);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.StepXUpDown);
             this.Controls.Add(this.RadiusLabel);
             this.Controls.Add(this.RightXLabel);
             this.Controls.Add(this.LeftXLabel);
@@ -246,7 +313,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RadiusUpDownValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XRightUpDownValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XLeftUpDownValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StepXUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TableOfValues)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,11 +328,16 @@
         private System.Windows.Forms.NumericUpDown XLeftUpDownValue;
 
         private System.Windows.Forms.Label StepLabel;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown StepXUpDown;
         private System.Windows.Forms.Label RadiusLabel;
         private System.Windows.Forms.Label RightXLabel;
         private System.Windows.Forms.Label LeftXLabel;
-        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse MainWindowForm;
         private System.Windows.Forms.Button TableButton;
+        private System.Windows.Forms.Button HideTableButton;
+        private Guna.UI.WinForms.GunaDragControl DragControl;
+        private System.Windows.Forms.DataGridView TableOfValues;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnY;
     }
 }

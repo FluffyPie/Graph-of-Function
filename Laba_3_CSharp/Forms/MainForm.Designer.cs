@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.MainChartWindow = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.RadiusUpDownValue = new System.Windows.Forms.NumericUpDown();
             this.XRightUpDownValue = new System.Windows.Forms.NumericUpDown();
@@ -51,51 +51,56 @@
             this.TableOfValues = new System.Windows.Forms.DataGridView();
             this.ColumnX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ErrorLabel = new System.Windows.Forms.Label();
+            this.TopPanel = new System.Windows.Forms.Panel();
+            this.SettingsButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.PanelDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MainChartWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadiusUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XRightUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XLeftUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepXUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableOfValues)).BeginInit();
+            this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainChartWindow
             // 
             this.MainChartWindow.BackColor = System.Drawing.Color.Transparent;
             this.MainChartWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            chartArea1.Name = "ChartArea";
-            this.MainChartWindow.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea";
+            this.MainChartWindow.ChartAreas.Add(chartArea2);
             this.MainChartWindow.Location = new System.Drawing.Point(-16, 39);
             this.MainChartWindow.Name = "MainChartWindow";
-            series1.ChartArea = "ChartArea";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend2";
-            series1.Name = "Series1";
-            series2.ChartArea = "ChartArea";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Name = "Series2";
-            series3.ChartArea = "ChartArea";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series3.MarkerBorderWidth = 5;
-            series3.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Series3";
-            series4.ChartArea = "ChartArea";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Name = "Series4";
-            series5.ChartArea = "ChartArea";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series5.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series5.MarkerSize = 7;
-            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series5.Name = "Series5";
-            this.MainChartWindow.Series.Add(series1);
-            this.MainChartWindow.Series.Add(series2);
-            this.MainChartWindow.Series.Add(series3);
-            this.MainChartWindow.Series.Add(series4);
-            this.MainChartWindow.Series.Add(series5);
+            series6.ChartArea = "ChartArea";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Legend = "Legend2";
+            series6.Name = "Series1";
+            series7.ChartArea = "ChartArea";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Name = "Series2";
+            series8.ChartArea = "ChartArea";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series8.MarkerBorderWidth = 5;
+            series8.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series8.Name = "Series3";
+            series9.ChartArea = "ChartArea";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Name = "Series4";
+            series10.ChartArea = "ChartArea";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series10.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series10.MarkerSize = 7;
+            series10.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series10.Name = "Series5";
+            this.MainChartWindow.Series.Add(series6);
+            this.MainChartWindow.Series.Add(series7);
+            this.MainChartWindow.Series.Add(series8);
+            this.MainChartWindow.Series.Add(series9);
+            this.MainChartWindow.Series.Add(series10);
             this.MainChartWindow.Size = new System.Drawing.Size(630, 470);
             this.MainChartWindow.TabIndex = 0;
             this.MainChartWindow.Text = "Chart";
@@ -289,11 +294,69 @@
             this.ColumnY.ReadOnly = true;
             this.ColumnY.ToolTipText = "Value of Y";
             // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(611, 289);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(146, 90);
+            this.ErrorLabel.TabIndex = 15;
+            this.ErrorLabel.Text = "At these coordinates, the graph degenerates into a point!";
+            // 
+            // TopPanel
+            // 
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(230)))));
+            this.TopPanel.Controls.Add(this.SettingsButton);
+            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPanel.Location = new System.Drawing.Point(0, 0);
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.Size = new System.Drawing.Size(769, 48);
+            this.TopPanel.TabIndex = 16;
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.AnimationHoverSpeed = 0.07F;
+            this.SettingsButton.AnimationSpeed = 0.03F;
+            this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.BaseColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.BorderColor = System.Drawing.Color.Black;
+            this.SettingsButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.SettingsButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.SettingsButton.CheckedForeColor = System.Drawing.Color.White;
+            this.SettingsButton.CheckedImage = null;
+            this.SettingsButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.SettingsButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.SettingsButton.FocusedColor = System.Drawing.Color.Empty;
+            this.SettingsButton.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SettingsButton.ForeColor = System.Drawing.Color.Black;
+            this.SettingsButton.Image = null;
+            this.SettingsButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.SettingsButton.LineColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.Location = new System.Drawing.Point(24, 6);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.SettingsButton.OnHoverForeColor = System.Drawing.Color.DimGray;
+            this.SettingsButton.OnHoverImage = null;
+            this.SettingsButton.OnHoverLineColor = System.Drawing.Color.Transparent;
+            this.SettingsButton.OnPressedColor = System.Drawing.Color.Black;
+            this.SettingsButton.Size = new System.Drawing.Size(116, 42);
+            this.SettingsButton.TabIndex = 0;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // PanelDragControl
+            // 
+            this.PanelDragControl.TargetControl = this.TopPanel;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 800);
+            this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.TableOfValues);
             this.Controls.Add(this.HideTableButton);
             this.Controls.Add(this.TableButton);
@@ -315,6 +378,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.XLeftUpDownValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepXUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableOfValues)).EndInit();
+            this.TopPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +403,9 @@
         private System.Windows.Forms.DataGridView TableOfValues;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnX;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnY;
+        private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.Panel TopPanel;
+        private Guna.UI.WinForms.GunaDragControl PanelDragControl;
+        private Guna.UI.WinForms.GunaAdvenceButton SettingsButton;
     }
 }

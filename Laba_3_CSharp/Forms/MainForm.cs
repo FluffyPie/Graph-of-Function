@@ -22,12 +22,11 @@ namespace Laba_3_CSharp.Forms
             MainChartWindow.ChartAreas[0].AxisX.LabelStyle.Format = "0.0";
             MainChartWindow.ChartAreas[0].AxisY.LabelStyle.Format = "0.0";
             DrawAGraph();
-   
             
-
         }
 
         Code.Calculations Calculations = new Code.Calculations();
+        Forms.Settings SettingsForm = new Forms.Settings();
         private void DrawAGraph()
         {
             MainChartWindow.Series[0].Points.Clear();
@@ -38,6 +37,10 @@ namespace Laba_3_CSharp.Forms
             double Radius = Convert.ToDouble(RadiusUpDownValue.Value);
             double XRight = Convert.ToDouble(XRightUpDownValue.Value);
             double XLeft = Convert.ToDouble(XLeftUpDownValue.Value);
+            if (XLeft == XRight)
+                ErrorLabel.Visible = true;
+            else
+                ErrorLabel.Visible = false;
             MainChartWindow.ChartAreas[0].AxisX.ScaleView.Size = Radius*5.5;
             MainChartWindow.ChartAreas[0].AxisY.ScaleView.Size = Radius*4;
             {
@@ -61,8 +64,11 @@ namespace Laba_3_CSharp.Forms
         private void RadiusValueChanged(object sender, EventArgs e)
         {
             DrawAGraph();
-            TableOfValues.Rows.Clear();
-            CreateTable();
+            if (HideTableButton.Visible == true)
+            {
+                TableOfValues.Rows.Clear();
+                CreateTable();
+            }
         }
 
         private void LeftXValueChanged(object sender, EventArgs e)
@@ -71,8 +77,11 @@ namespace Laba_3_CSharp.Forms
             double XLeft = Convert.ToDouble(XLeftUpDownValue.Value);
             MainChartWindow.ChartAreas[0].AxisX.ScaleView.Scroll(XLeft-Radius*10000);
             DrawAGraph();
-            TableOfValues.Rows.Clear();
-            CreateTable();
+            if (HideTableButton.Visible == true)
+            {
+                TableOfValues.Rows.Clear();
+                CreateTable();
+            }
         }
 
         private void RightXValueChanged(object sender, EventArgs e)
@@ -81,8 +90,11 @@ namespace Laba_3_CSharp.Forms
             double XRight= Convert.ToDouble(XRightUpDownValue.Value);
             MainChartWindow.ChartAreas[0].AxisX.ScaleView.Scroll(XRight+Radius*10000);
             DrawAGraph();
-            TableOfValues.Rows.Clear();
-            CreateTable();
+            if (HideTableButton.Visible == true)
+            {
+                TableOfValues.Rows.Clear();
+                CreateTable();
+            }
         }
 
         private void TableButton_Click(object sender, EventArgs e)
@@ -90,6 +102,10 @@ namespace Laba_3_CSharp.Forms
             this.Height = 800;
             TableButton.Visible = false;
             HideTableButton.Visible = true;
+            if (HideTableButton.Visible == true)
+            CreateTable();
+            
+            
         }
 
         private void HideTableButton_Click(object sender, EventArgs e)
@@ -113,8 +129,16 @@ namespace Laba_3_CSharp.Forms
 
         private void StepValuesChanged(object sender, EventArgs e)
         {
-            TableOfValues.Rows.Clear();
-            CreateTable();
+            if (HideTableButton.Visible == true)
+            {
+                TableOfValues.Rows.Clear();
+                CreateTable();
+            }     
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm.ShowDialog();
         }
     }  
 }

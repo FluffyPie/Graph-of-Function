@@ -19,6 +19,8 @@ namespace Laba_3_CSharp.Forms
                 SetDarkColor();
             else if ((Properties.Settings.Default.Theme == "Custom"))
                 SetCustomColor();
+            if (Properties.Settings.Default.Language == "Russian")
+                SetRussianLanguage();
             Code.Calculations Calculations = new Code.Calculations();
             double Radius = 1;
             double XLeft = 0;
@@ -156,9 +158,16 @@ namespace Laba_3_CSharp.Forms
         private void SetDarkColor()
         {
             GetSelfAndChildrenRecursive(this).OfType<Button>().ToList()
-                  .ForEach(button => button.BackColor = Color.FromArgb(32, 34, 37));
+                  .ForEach(button => button.BackColor = Color.FromArgb(54, 57, 63));
             GetSelfAndChildrenRecursive(this).OfType<Button>().ToList()
                   .ForEach(button => button.ForeColor = Color.White);
+            MainWindowPanel.BackColor = Color.FromArgb(54, 57, 63);
+            CustomThemeMainWindow.BackColor = Color.FromArgb(54, 57, 63);
+            CustomWindowTopPanel.BackColor = Color.FromArgb(32, 34, 37);
+            CustomThemeLabel.ForeColor = Color.White;
+            MainChartWindow.ChartAreas[0].BackColor = Color.FromArgb(54, 57, 63);
+            MainChartWindow.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
+            MainChartWindow.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
 
         }
         private void SetCustomColor()
@@ -167,10 +176,29 @@ namespace Laba_3_CSharp.Forms
                   .ForEach(button => button.BackColor = Properties.Settings.Default.ButtonColor);
             GetSelfAndChildrenRecursive(this).OfType<Button>().ToList()
                   .ForEach(button => button.ForeColor = Properties.Settings.Default.TextColor);
+            MainWindowPanel.BackColor = Properties.Settings.Default.MainWindowColor;
+            CustomThemeMainWindow.BackColor = Properties.Settings.Default.MainWindowColor;
+            CustomWindowTopPanel.BackColor = Properties.Settings.Default.TopPanelColor;
+            CustomThemeLabel.ForeColor = Properties.Settings.Default.TextColor;
+            MainChartWindow.ChartAreas[0].BackColor = Properties.Settings.Default.MainWindowColor;
+            MainChartWindow.ChartAreas[0].AxisX.LabelStyle.ForeColor = Properties.Settings.Default.TextColor;
+            MainChartWindow.ChartAreas[0].AxisY.LabelStyle.ForeColor = Properties.Settings.Default.TextColor;
         }
         private void SetRussianLanguage()
         {
-            
+            CustomThemeLabel.Text = "   Это текст";
+            CustomThemeButton.Text = "А это кнопка";
+            TopPanelColorButton.Text = "Цвет верхней панели";
+            TextColorButton.Text = "Цвет надписей";
+            MainWindowColorButton.Text = "Цвет главного окна";
+            GraphOneColorButton.Text = "Цвет первого графика";
+            GraphTwoColorButton.Text = "Цвет второго графика";
+            GraphThreeColorButton.Text = "Цвет третьего графика";
+            GraphFourColorButton.Text = "Цвет четвертого графика";
+            FifthGraphColorButton.Text = "Цвет пятого графика";
+            ButtonColorButton.Text = "Цвет кнопок";
+            CancelButton.Text = "Отменить";
+            SaveButton.Text = "Сохранить и закрыть";
         }
         
     }

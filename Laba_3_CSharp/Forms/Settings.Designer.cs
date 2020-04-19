@@ -34,6 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ShowSetCustomColor = new Guna.UI.WinForms.GunaAdvenceButton();
             this.CustomThemeRadioButton = new System.Windows.Forms.RadioButton();
             this.TooltipSettings = new System.Windows.Forms.CheckBox();
             this.ThemeLabel = new System.Windows.Forms.Label();
@@ -43,10 +44,14 @@
             this.TooltipLabel = new System.Windows.Forms.Label();
             this.CancelButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.SaveButton = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.ShowSetCustomColor = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.CustomTopPanel = new System.Windows.Forms.Panel();
+            this.CustomMainWindow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomMainWindow)).BeginInit();
             this.SuspendLayout();
             // 
             // LightThemeRadioButton
@@ -97,6 +102,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.CustomMainWindow);
+            this.panel1.Controls.Add(this.CustomTopPanel);
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.ShowSetCustomColor);
             this.panel1.Controls.Add(this.CustomThemeRadioButton);
             this.panel1.Controls.Add(this.LightThemeRadioButton);
@@ -107,6 +115,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(405, 180);
             this.panel1.TabIndex = 20;
+            // 
+            // ShowSetCustomColor
+            // 
+            this.ShowSetCustomColor.AnimationHoverSpeed = 0.07F;
+            this.ShowSetCustomColor.AnimationSpeed = 0.03F;
+            this.ShowSetCustomColor.BaseColor = System.Drawing.Color.Silver;
+            this.ShowSetCustomColor.BorderColor = System.Drawing.Color.Black;
+            this.ShowSetCustomColor.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.ShowSetCustomColor.CheckedBorderColor = System.Drawing.Color.Black;
+            this.ShowSetCustomColor.CheckedForeColor = System.Drawing.Color.Black;
+            this.ShowSetCustomColor.CheckedImage = null;
+            this.ShowSetCustomColor.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.ShowSetCustomColor.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ShowSetCustomColor.FocusedColor = System.Drawing.Color.Empty;
+            this.ShowSetCustomColor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ShowSetCustomColor.ForeColor = System.Drawing.Color.Black;
+            this.ShowSetCustomColor.Image = null;
+            this.ShowSetCustomColor.ImageSize = new System.Drawing.Size(20, 20);
+            this.ShowSetCustomColor.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.ShowSetCustomColor.Location = new System.Drawing.Point(151, 146);
+            this.ShowSetCustomColor.Name = "ShowSetCustomColor";
+            this.ShowSetCustomColor.OnHoverBaseColor = System.Drawing.Color.Silver;
+            this.ShowSetCustomColor.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.ShowSetCustomColor.OnHoverForeColor = System.Drawing.Color.White;
+            this.ShowSetCustomColor.OnHoverImage = null;
+            this.ShowSetCustomColor.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.ShowSetCustomColor.OnPressedColor = System.Drawing.Color.Black;
+            this.ShowSetCustomColor.Size = new System.Drawing.Size(123, 34);
+            this.ShowSetCustomColor.TabIndex = 5;
+            this.ShowSetCustomColor.Text = "Set Custom Colors";
+            this.ShowSetCustomColor.Click += new System.EventHandler(this.ShowSetCustomColor_Click);
             // 
             // CustomThemeRadioButton
             // 
@@ -263,36 +302,31 @@
             this.SaveButton.Text = "Save";
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // ShowSetCustomColor
+            // pictureBox3
             // 
-            this.ShowSetCustomColor.AnimationHoverSpeed = 0.07F;
-            this.ShowSetCustomColor.AnimationSpeed = 0.03F;
-            this.ShowSetCustomColor.BaseColor = System.Drawing.Color.Silver;
-            this.ShowSetCustomColor.BorderColor = System.Drawing.Color.Black;
-            this.ShowSetCustomColor.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.ShowSetCustomColor.CheckedBorderColor = System.Drawing.Color.Black;
-            this.ShowSetCustomColor.CheckedForeColor = System.Drawing.Color.Black;
-            this.ShowSetCustomColor.CheckedImage = null;
-            this.ShowSetCustomColor.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.ShowSetCustomColor.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ShowSetCustomColor.FocusedColor = System.Drawing.Color.Empty;
-            this.ShowSetCustomColor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ShowSetCustomColor.ForeColor = System.Drawing.Color.Black;
-            this.ShowSetCustomColor.Image = null;
-            this.ShowSetCustomColor.ImageSize = new System.Drawing.Size(20, 20);
-            this.ShowSetCustomColor.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.ShowSetCustomColor.Location = new System.Drawing.Point(151, 146);
-            this.ShowSetCustomColor.Name = "ShowSetCustomColor";
-            this.ShowSetCustomColor.OnHoverBaseColor = System.Drawing.Color.Silver;
-            this.ShowSetCustomColor.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.ShowSetCustomColor.OnHoverForeColor = System.Drawing.Color.White;
-            this.ShowSetCustomColor.OnHoverImage = null;
-            this.ShowSetCustomColor.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.ShowSetCustomColor.OnPressedColor = System.Drawing.Color.Black;
-            this.ShowSetCustomColor.Size = new System.Drawing.Size(123, 34);
-            this.ShowSetCustomColor.TabIndex = 5;
-            this.ShowSetCustomColor.Text = "Set Custom Colors";
-            this.ShowSetCustomColor.Click += new System.EventHandler(this.ShowSetCustomColor_Click);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(292, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(94, 90);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // CustomTopPanel
+            // 
+            this.CustomTopPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.CustomTopPanel.Location = new System.Drawing.Point(302, 34);
+            this.CustomTopPanel.Name = "CustomTopPanel";
+            this.CustomTopPanel.Size = new System.Drawing.Size(60, 40);
+            this.CustomTopPanel.TabIndex = 7;
+            // 
+            // CustomMainWindow
+            // 
+            this.CustomMainWindow.Location = new System.Drawing.Point(320, 55);
+            this.CustomMainWindow.Name = "CustomMainWindow";
+            this.CustomMainWindow.Size = new System.Drawing.Size(54, 41);
+            this.CustomMainWindow.TabIndex = 23;
+            this.CustomMainWindow.TabStop = false;
             // 
             // Settings
             // 
@@ -315,6 +349,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomMainWindow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +374,8 @@
         private Guna.UI.WinForms.GunaAdvenceButton CancelButton;
         private Guna.UI.WinForms.GunaAdvenceButton SaveButton;
         private Guna.UI.WinForms.GunaAdvenceButton ShowSetCustomColor;
+        private System.Windows.Forms.Panel CustomTopPanel;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox CustomMainWindow;
     }
 }

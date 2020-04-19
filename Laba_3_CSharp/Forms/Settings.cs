@@ -16,7 +16,8 @@ namespace Laba_3_CSharp.Forms
         public Settings()
         {
             InitializeComponent();
-
+            CustomTopPanel.BackColor = Properties.Settings.Default.TopPanelColor;
+            CustomMainWindow.BackColor = Properties.Settings.Default.MainWindowColor;
             if (Properties.Settings.Default.Language == "Russian")
                 LanguageComboBox.SelectedIndex = 0;
             else

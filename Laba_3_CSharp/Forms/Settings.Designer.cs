@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.LightThemeRadioButton = new System.Windows.Forms.RadioButton();
             this.DarkThemeRadioButton = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CustomMainWindow = new System.Windows.Forms.PictureBox();
+            this.CustomTopPanel = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ShowSetCustomColor = new Guna.UI.WinForms.GunaAdvenceButton();
             this.CustomThemeRadioButton = new System.Windows.Forms.RadioButton();
             this.TooltipSettings = new System.Windows.Forms.CheckBox();
@@ -44,14 +48,12 @@
             this.TooltipLabel = new System.Windows.Forms.Label();
             this.CancelButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.SaveButton = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.CustomTopPanel = new System.Windows.Forms.Panel();
-            this.CustomMainWindow = new System.Windows.Forms.PictureBox();
+            this.DragControlMainWindow = new Guna.UI.WinForms.GunaDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomMainWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // LightThemeRadioButton
@@ -71,7 +73,7 @@
             this.DarkThemeRadioButton.AutoSize = true;
             this.DarkThemeRadioButton.Checked = true;
             this.DarkThemeRadioButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.DarkThemeRadioButton.Location = new System.Drawing.Point(44, 117);
+            this.DarkThemeRadioButton.Location = new System.Drawing.Point(45, 117);
             this.DarkThemeRadioButton.Name = "DarkThemeRadioButton";
             this.DarkThemeRadioButton.Size = new System.Drawing.Size(84, 17);
             this.DarkThemeRadioButton.TabIndex = 2;
@@ -111,10 +113,36 @@
             this.panel1.Controls.Add(this.DarkThemeRadioButton);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(61, 165);
+            this.panel1.Location = new System.Drawing.Point(54, 165);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(405, 180);
             this.panel1.TabIndex = 20;
+            // 
+            // CustomMainWindow
+            // 
+            this.CustomMainWindow.Location = new System.Drawing.Point(320, 55);
+            this.CustomMainWindow.Name = "CustomMainWindow";
+            this.CustomMainWindow.Size = new System.Drawing.Size(54, 41);
+            this.CustomMainWindow.TabIndex = 23;
+            this.CustomMainWindow.TabStop = false;
+            // 
+            // CustomTopPanel
+            // 
+            this.CustomTopPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.CustomTopPanel.Location = new System.Drawing.Point(302, 34);
+            this.CustomTopPanel.Name = "CustomTopPanel";
+            this.CustomTopPanel.Size = new System.Drawing.Size(60, 40);
+            this.CustomTopPanel.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(292, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(94, 90);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // ShowSetCustomColor
             // 
@@ -134,7 +162,7 @@
             this.ShowSetCustomColor.Image = null;
             this.ShowSetCustomColor.ImageSize = new System.Drawing.Size(20, 20);
             this.ShowSetCustomColor.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.ShowSetCustomColor.Location = new System.Drawing.Point(151, 146);
+            this.ShowSetCustomColor.Location = new System.Drawing.Point(151, 140);
             this.ShowSetCustomColor.Name = "ShowSetCustomColor";
             this.ShowSetCustomColor.OnHoverBaseColor = System.Drawing.Color.Silver;
             this.ShowSetCustomColor.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -145,6 +173,7 @@
             this.ShowSetCustomColor.Size = new System.Drawing.Size(123, 34);
             this.ShowSetCustomColor.TabIndex = 5;
             this.ShowSetCustomColor.Text = "Set Custom Colors";
+            this.ShowSetCustomColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ShowSetCustomColor.Click += new System.EventHandler(this.ShowSetCustomColor_Click);
             // 
             // CustomThemeRadioButton
@@ -165,11 +194,11 @@
             this.TooltipSettings.CheckState = System.Windows.Forms.CheckState.Checked;
             this.TooltipSettings.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TooltipSettings.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TooltipSettings.Location = new System.Drawing.Point(158, 403);
+            this.TooltipSettings.Location = new System.Drawing.Point(218, 393);
             this.TooltipSettings.Name = "TooltipSettings";
             this.TooltipSettings.Size = new System.Drawing.Size(229, 36);
             this.TooltipSettings.TabIndex = 19;
-            this.TooltipSettings.Text = "Active/Включены";
+            this.TooltipSettings.Text = "Active";
             this.TooltipSettings.UseVisualStyleBackColor = true;
             this.TooltipSettings.CheckedChanged += new System.EventHandler(this.TooltipChanged);
             // 
@@ -178,11 +207,11 @@
             this.ThemeLabel.AutoSize = true;
             this.ThemeLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ThemeLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ThemeLabel.Location = new System.Drawing.Point(9, 127);
+            this.ThemeLabel.Location = new System.Drawing.Point(146, 130);
             this.ThemeLabel.Name = "ThemeLabel";
-            this.ThemeLabel.Size = new System.Drawing.Size(505, 21);
+            this.ThemeLabel.Size = new System.Drawing.Size(241, 21);
             this.ThemeLabel.TabIndex = 16;
-            this.ThemeLabel.Text = "Choose a color scheme/Выберите цветовую схему";
+            this.ThemeLabel.Text = "Choose a color scheme";
             // 
             // TopPanel
             // 
@@ -207,7 +236,7 @@
             this.LanguageComboBox.Items.AddRange(new object[] {
             "Русский",
             "English"});
-            this.LanguageComboBox.Location = new System.Drawing.Point(159, 80);
+            this.LanguageComboBox.Location = new System.Drawing.Point(171, 81);
             this.LanguageComboBox.Name = "LanguageComboBox";
             this.LanguageComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.LanguageComboBox.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -221,22 +250,22 @@
             this.LanguageLabel.BackColor = System.Drawing.Color.Transparent;
             this.LanguageLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LanguageLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.LanguageLabel.Location = new System.Drawing.Point(94, 44);
+            this.LanguageLabel.Location = new System.Drawing.Point(178, 47);
             this.LanguageLabel.Name = "LanguageLabel";
-            this.LanguageLabel.Size = new System.Drawing.Size(329, 21);
+            this.LanguageLabel.Size = new System.Drawing.Size(175, 21);
             this.LanguageLabel.TabIndex = 14;
-            this.LanguageLabel.Text = "Choose Language/Выберите язык\r\n";
+            this.LanguageLabel.Text = "Choose Language";
             // 
             // TooltipLabel
             // 
-            this.TooltipLabel.AutoSize = true;
             this.TooltipLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TooltipLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TooltipLabel.Location = new System.Drawing.Point(94, 369);
+            this.TooltipLabel.Location = new System.Drawing.Point(118, 369);
             this.TooltipLabel.Name = "TooltipLabel";
-            this.TooltipLabel.Size = new System.Drawing.Size(329, 21);
+            this.TooltipLabel.Size = new System.Drawing.Size(283, 21);
             this.TooltipLabel.TabIndex = 17;
-            this.TooltipLabel.Text = "Tooltip/Всплывающие подсказки";
+            this.TooltipLabel.Text = "Tooltips";
+            this.TooltipLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CancelButton
             // 
@@ -257,7 +286,7 @@
             this.CancelButton.Image = null;
             this.CancelButton.ImageSize = new System.Drawing.Size(20, 20);
             this.CancelButton.LineColor = System.Drawing.Color.Transparent;
-            this.CancelButton.Location = new System.Drawing.Point(158, 440);
+            this.CancelButton.Location = new System.Drawing.Point(150, 440);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.CancelButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -268,6 +297,7 @@
             this.CancelButton.Size = new System.Drawing.Size(92, 42);
             this.CancelButton.TabIndex = 21;
             this.CancelButton.Text = "Cancel";
+            this.CancelButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // SaveButton
@@ -289,7 +319,7 @@
             this.SaveButton.Image = null;
             this.SaveButton.ImageSize = new System.Drawing.Size(20, 20);
             this.SaveButton.LineColor = System.Drawing.Color.Transparent;
-            this.SaveButton.Location = new System.Drawing.Point(283, 440);
+            this.SaveButton.Location = new System.Drawing.Point(295, 440);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.SaveButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -297,36 +327,15 @@
             this.SaveButton.OnHoverImage = null;
             this.SaveButton.OnHoverLineColor = System.Drawing.Color.Transparent;
             this.SaveButton.OnPressedColor = System.Drawing.Color.Black;
-            this.SaveButton.Size = new System.Drawing.Size(70, 42);
+            this.SaveButton.Size = new System.Drawing.Size(92, 42);
             this.SaveButton.TabIndex = 22;
             this.SaveButton.Text = "Save";
+            this.SaveButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // pictureBox3
+            // DragControlMainWindow
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(292, 21);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(94, 90);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // CustomTopPanel
-            // 
-            this.CustomTopPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.CustomTopPanel.Location = new System.Drawing.Point(302, 34);
-            this.CustomTopPanel.Name = "CustomTopPanel";
-            this.CustomTopPanel.Size = new System.Drawing.Size(60, 40);
-            this.CustomTopPanel.TabIndex = 7;
-            // 
-            // CustomMainWindow
-            // 
-            this.CustomMainWindow.Location = new System.Drawing.Point(320, 55);
-            this.CustomMainWindow.Name = "CustomMainWindow";
-            this.CustomMainWindow.Size = new System.Drawing.Size(54, 41);
-            this.CustomMainWindow.TabIndex = 23;
-            this.CustomMainWindow.TabStop = false;
+            this.DragControlMainWindow.TargetControl = this;
             // 
             // Settings
             // 
@@ -349,8 +358,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomMainWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +386,6 @@
         private System.Windows.Forms.Panel CustomTopPanel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox CustomMainWindow;
+        private Guna.UI.WinForms.GunaDragControl DragControlMainWindow;
     }
 }

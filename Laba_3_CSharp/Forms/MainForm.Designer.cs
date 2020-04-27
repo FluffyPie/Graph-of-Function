@@ -52,16 +52,22 @@
             this.ColumnX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ErrorLabel = new System.Windows.Forms.Label();
-            this.TopPanel = new System.Windows.Forms.Panel();
-            this.SettingsButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.PanelDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveToFileButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFromFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingsButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutButton = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.MainChartWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadiusUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XRightUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XLeftUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepXUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableOfValues)).BeginInit();
-            this.TopPanel.SuspendLayout();
+            this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainChartWindow
@@ -304,58 +310,76 @@
             this.ErrorLabel.TabIndex = 15;
             this.ErrorLabel.Text = "At these coordinates, the graph degenerates into a point!";
             // 
-            // TopPanel
+            // PanelDragControl
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(230)))));
-            this.TopPanel.Controls.Add(this.SettingsButton);
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(769, 48);
-            this.TopPanel.TabIndex = 16;
+            this.PanelDragControl.TargetControl = null;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // MenuStrip
+            // 
+            this.MenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(230)))));
+            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.MenuStrip.Name = "MenuStrip";
+            this.MenuStrip.Size = new System.Drawing.Size(769, 29);
+            this.MenuStrip.TabIndex = 16;
+            this.MenuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SaveToFileButton,
+            this.openFromFileToolStripMenuItem,
+            this.SettingsButton,
+            this.AboutButton});
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(66, 25);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // SaveToFileButton
+            // 
+            this.SaveToFileButton.Name = "SaveToFileButton";
+            this.SaveToFileButton.Size = new System.Drawing.Size(234, 26);
+            this.SaveToFileButton.Text = "Save to File";
+            this.SaveToFileButton.Click += new System.EventHandler(this.SaveToFileButton_Click);
+            // 
+            // openFromFileToolStripMenuItem
+            // 
+            this.openFromFileToolStripMenuItem.Name = "openFromFileToolStripMenuItem";
+            this.openFromFileToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.openFromFileToolStripMenuItem.Text = "Open from File";
             // 
             // SettingsButton
             // 
-            this.SettingsButton.AnimationHoverSpeed = 0.07F;
-            this.SettingsButton.AnimationSpeed = 0.03F;
-            this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.BaseColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.BorderColor = System.Drawing.Color.Black;
-            this.SettingsButton.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.SettingsButton.CheckedBorderColor = System.Drawing.Color.Black;
-            this.SettingsButton.CheckedForeColor = System.Drawing.Color.White;
-            this.SettingsButton.CheckedImage = null;
-            this.SettingsButton.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.SettingsButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.SettingsButton.FocusedColor = System.Drawing.Color.Empty;
-            this.SettingsButton.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SettingsButton.ForeColor = System.Drawing.Color.Black;
-            this.SettingsButton.Image = null;
-            this.SettingsButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.SettingsButton.LineColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.Location = new System.Drawing.Point(24, 6);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.SettingsButton.OnHoverForeColor = System.Drawing.Color.DimGray;
-            this.SettingsButton.OnHoverImage = null;
-            this.SettingsButton.OnHoverLineColor = System.Drawing.Color.Transparent;
-            this.SettingsButton.OnPressedColor = System.Drawing.Color.Black;
-            this.SettingsButton.Size = new System.Drawing.Size(116, 42);
-            this.SettingsButton.TabIndex = 0;
+            this.SettingsButton.Size = new System.Drawing.Size(234, 26);
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // PanelDragControl
+            // AboutButton
             // 
-            this.PanelDragControl.TargetControl = this.TopPanel;
+            this.AboutButton.Name = "AboutButton";
+            this.AboutButton.Size = new System.Drawing.Size(234, 26);
+            this.AboutButton.Text = "About";
+            this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 800);
-            this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.MenuStrip);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.TableOfValues);
             this.Controls.Add(this.HideTableButton);
@@ -370,6 +394,7 @@
             this.Controls.Add(this.RadiusUpDownValue);
             this.Controls.Add(this.MainChartWindow);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.MenuStrip;
             this.Name = "MainForm";
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.MainChartWindow)).EndInit();
@@ -378,7 +403,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.XLeftUpDownValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StepXUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableOfValues)).EndInit();
-            this.TopPanel.ResumeLayout(false);
+            this.MenuStrip.ResumeLayout(false);
+            this.MenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,8 +430,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnX;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnY;
         private System.Windows.Forms.Label ErrorLabel;
-        private System.Windows.Forms.Panel TopPanel;
         private Guna.UI.WinForms.GunaDragControl PanelDragControl;
-        private Guna.UI.WinForms.GunaAdvenceButton SettingsButton;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.MenuStrip MenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SaveToFileButton;
+        private System.Windows.Forms.ToolStripMenuItem openFromFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SettingsButton;
+        private System.Windows.Forms.ToolStripMenuItem AboutButton;
     }
 }

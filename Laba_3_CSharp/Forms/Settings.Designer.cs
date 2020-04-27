@@ -148,7 +148,8 @@
             // 
             this.ShowSetCustomColor.AnimationHoverSpeed = 0.07F;
             this.ShowSetCustomColor.AnimationSpeed = 0.03F;
-            this.ShowSetCustomColor.BaseColor = System.Drawing.Color.Silver;
+            this.ShowSetCustomColor.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ShowSetCustomColor.BaseColor = System.Drawing.Color.Transparent;
             this.ShowSetCustomColor.BorderColor = System.Drawing.Color.Black;
             this.ShowSetCustomColor.CheckedBaseColor = System.Drawing.Color.Gray;
             this.ShowSetCustomColor.CheckedBorderColor = System.Drawing.Color.Black;
@@ -286,7 +287,7 @@
             this.CancelButton.Image = null;
             this.CancelButton.ImageSize = new System.Drawing.Size(20, 20);
             this.CancelButton.LineColor = System.Drawing.Color.Transparent;
-            this.CancelButton.Location = new System.Drawing.Point(150, 440);
+            this.CancelButton.Location = new System.Drawing.Point(70, 440);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.CancelButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -294,7 +295,7 @@
             this.CancelButton.OnHoverImage = null;
             this.CancelButton.OnHoverLineColor = System.Drawing.Color.Transparent;
             this.CancelButton.OnPressedColor = System.Drawing.Color.Black;
-            this.CancelButton.Size = new System.Drawing.Size(92, 42);
+            this.CancelButton.Size = new System.Drawing.Size(123, 42);
             this.CancelButton.TabIndex = 21;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -319,7 +320,7 @@
             this.SaveButton.Image = null;
             this.SaveButton.ImageSize = new System.Drawing.Size(20, 20);
             this.SaveButton.LineColor = System.Drawing.Color.Transparent;
-            this.SaveButton.Location = new System.Drawing.Point(295, 440);
+            this.SaveButton.Location = new System.Drawing.Point(324, 440);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.SaveButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -327,7 +328,7 @@
             this.SaveButton.OnHoverImage = null;
             this.SaveButton.OnHoverLineColor = System.Drawing.Color.Transparent;
             this.SaveButton.OnPressedColor = System.Drawing.Color.Black;
-            this.SaveButton.Size = new System.Drawing.Size(92, 42);
+            this.SaveButton.Size = new System.Drawing.Size(123, 42);
             this.SaveButton.TabIndex = 22;
             this.SaveButton.Text = "Save";
             this.SaveButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

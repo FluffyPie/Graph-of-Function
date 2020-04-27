@@ -15,6 +15,12 @@ namespace Laba_3_CSharp.Forms
         public MainForm()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.Theme == "Dark")
+                SetDarkColor();
+            else if ((Properties.Settings.Default.Theme == "Custom"))
+                SetCustomColor();
+            if (Properties.Settings.Default.Language == "Russian")
+                SetRussianLanguage();
             this.Height = 500;
             double Radius = Convert.ToDouble(RadiusUpDownValue.Value);
             MainChartWindow.ChartAreas[0].AxisX.ScaleView.Size = Radius * 5.5;
@@ -136,9 +142,45 @@ namespace Laba_3_CSharp.Forms
             }     
         }
 
+        void SetDarkColor()
+        {
+
+        }
+        void SetCustomColor()
+        {
+
+        }
+        void SetRussianLanguage()
+        {
+
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CollapseButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+       
+    
+
+        private void AboutButton_Click(object sender, EventArgs e)
+        {
+           
+        }
+
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             SettingsForm.ShowDialog();
+        }
+
+        private void SaveToFileButton_Click(object sender, EventArgs e)
+        {
+
         }
     }  
 }

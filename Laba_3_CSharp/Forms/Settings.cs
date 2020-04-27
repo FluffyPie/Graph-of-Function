@@ -52,7 +52,7 @@ namespace Laba_3_CSharp.Forms
             this.LightThemeRadioButton.ForeColor = Color.White;
             this.CustomThemeRadioButton.ForeColor = Color.White;
             this.ShowSetCustomColor.ForeColor = Color.White;
-            this.ShowSetCustomColor.BaseColor = Color.FromArgb(32, 34, 37);
+            this.ShowSetCustomColor.BackColor = Color.FromArgb(32, 34, 37);
             this.TooltipLabel.ForeColor = Color.White;
             this.TooltipSettings.ForeColor = Color.White;
             this.CancelButton.ForeColor = Color.White;
@@ -70,7 +70,7 @@ namespace Laba_3_CSharp.Forms
             this.LightThemeRadioButton.ForeColor = Properties.Settings.Default.TextColor;
             this.CustomThemeRadioButton.ForeColor = Properties.Settings.Default.TextColor;
             this.ShowSetCustomColor.ForeColor = Properties.Settings.Default.TextColor;
-            this.ShowSetCustomColor.BaseColor = Properties.Settings.Default.ButtonColor;
+            this.ShowSetCustomColor.BackColor = Properties.Settings.Default.ButtonColor;
             this.TooltipLabel.ForeColor = Properties.Settings.Default.TextColor;
             this.TooltipSettings.ForeColor = Properties.Settings.Default.TextColor;
             this.CancelButton.ForeColor = Properties.Settings.Default.TextColor;

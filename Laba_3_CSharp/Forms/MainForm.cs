@@ -425,5 +425,15 @@ namespace Laba_3_CSharp.Forms
                     ToolTipPopup.SetToolTip(StepLabel, "The value of the step that defines the range in the table of X and Y values");
             }
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CollapseButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }  
 }

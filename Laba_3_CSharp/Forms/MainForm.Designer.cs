@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.MainChartWindow = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.RadiusUpDownValue = new System.Windows.Forms.NumericUpDown();
             this.XRightUpDownValue = new System.Windows.Forms.NumericUpDown();
@@ -65,6 +65,8 @@
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.GraphFormulaLabel = new System.Windows.Forms.Label();
             this.ParametricLabel = new System.Windows.Forms.Label();
+            this.CloseButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.CollapseButton = new Guna.UI.WinForms.GunaAdvenceButton();
             ((System.ComponentModel.ISupportInitialize)(this.MainChartWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadiusUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XRightUpDownValue)).BeginInit();
@@ -78,44 +80,44 @@
             // 
             this.MainChartWindow.BackColor = System.Drawing.Color.Transparent;
             this.MainChartWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            chartArea7.AxisX.TitleForeColor = System.Drawing.Color.Transparent;
-            chartArea7.Name = "ChartArea";
-            this.MainChartWindow.ChartAreas.Add(chartArea7);
+            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea";
+            this.MainChartWindow.ChartAreas.Add(chartArea3);
             this.MainChartWindow.Location = new System.Drawing.Point(15, 75);
             this.MainChartWindow.Name = "MainChartWindow";
-            series31.ChartArea = "ChartArea";
-            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series31.Legend = "Legend2";
-            series31.Name = "Series1";
-            series32.ChartArea = "ChartArea";
-            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series32.Legend = "Legend1";
-            series32.Name = "Series2";
-            series33.ChartArea = "ChartArea";
-            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series33.Legend = "Legend1";
-            series33.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series33.MarkerBorderWidth = 5;
-            series33.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series33.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series33.Name = "Series3";
-            series34.ChartArea = "ChartArea";
-            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series34.Legend = "Legend1";
-            series34.Name = "Series4";
-            series35.ChartArea = "ChartArea";
-            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series35.Legend = "Legend1";
-            series35.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series35.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series35.MarkerSize = 7;
-            series35.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series35.Name = "Series5";
-            this.MainChartWindow.Series.Add(series31);
-            this.MainChartWindow.Series.Add(series32);
-            this.MainChartWindow.Series.Add(series33);
-            this.MainChartWindow.Series.Add(series34);
-            this.MainChartWindow.Series.Add(series35);
+            series11.ChartArea = "ChartArea";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Legend = "Legend2";
+            series11.Name = "Series1";
+            series12.ChartArea = "ChartArea";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series12.Legend = "Legend1";
+            series12.Name = "Series2";
+            series13.ChartArea = "ChartArea";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series13.Legend = "Legend1";
+            series13.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series13.MarkerBorderWidth = 5;
+            series13.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series13.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series13.Name = "Series3";
+            series14.ChartArea = "ChartArea";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series14.Legend = "Legend1";
+            series14.Name = "Series4";
+            series15.ChartArea = "ChartArea";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series15.Legend = "Legend1";
+            series15.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series15.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series15.MarkerSize = 7;
+            series15.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series15.Name = "Series5";
+            this.MainChartWindow.Series.Add(series11);
+            this.MainChartWindow.Series.Add(series12);
+            this.MainChartWindow.Series.Add(series13);
+            this.MainChartWindow.Series.Add(series14);
+            this.MainChartWindow.Series.Add(series15);
             this.MainChartWindow.Size = new System.Drawing.Size(589, 434);
             this.MainChartWindow.TabIndex = 0;
             this.MainChartWindow.Text = "Chart";
@@ -412,11 +414,77 @@
             this.ParametricLabel.TabIndex = 18;
             this.ParametricLabel.Text = "Parametric equation of the graph";
             // 
+            // CloseButton
+            // 
+            this.CloseButton.AnimationHoverSpeed = 0.07F;
+            this.CloseButton.AnimationSpeed = 0.03F;
+            this.CloseButton.BackColor = System.Drawing.Color.Transparent;
+            this.CloseButton.BaseColor = System.Drawing.Color.Red;
+            this.CloseButton.BorderColor = System.Drawing.Color.Black;
+            this.CloseButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.CloseButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.CloseButton.CheckedForeColor = System.Drawing.Color.White;
+            this.CloseButton.CheckedImage = null;
+            this.CloseButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.CloseButton.FocusedColor = System.Drawing.Color.Empty;
+            this.CloseButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CloseButton.ForeColor = System.Drawing.Color.Transparent;
+            this.CloseButton.Image = null;
+            this.CloseButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.CloseButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.CloseButton.Location = new System.Drawing.Point(729, 7);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.CloseButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.CloseButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.CloseButton.OnHoverImage = null;
+            this.CloseButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.CloseButton.OnPressedColor = System.Drawing.Color.Black;
+            this.CloseButton.Radius = 10;
+            this.CloseButton.Size = new System.Drawing.Size(18, 17);
+            this.CloseButton.TabIndex = 19;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // CollapseButton
+            // 
+            this.CollapseButton.AnimationHoverSpeed = 0.07F;
+            this.CollapseButton.AnimationSpeed = 0.03F;
+            this.CollapseButton.BackColor = System.Drawing.Color.Transparent;
+            this.CollapseButton.BaseColor = System.Drawing.Color.Gold;
+            this.CollapseButton.BorderColor = System.Drawing.Color.Black;
+            this.CollapseButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.CollapseButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.CollapseButton.CheckedForeColor = System.Drawing.Color.White;
+            this.CollapseButton.CheckedImage = null;
+            this.CollapseButton.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.CollapseButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.CollapseButton.FocusedColor = System.Drawing.Color.Empty;
+            this.CollapseButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CollapseButton.ForeColor = System.Drawing.Color.Transparent;
+            this.CollapseButton.Image = null;
+            this.CollapseButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.CollapseButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.CollapseButton.Location = new System.Drawing.Point(705, 7);
+            this.CollapseButton.Name = "CollapseButton";
+            this.CollapseButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.CollapseButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.CollapseButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.CollapseButton.OnHoverImage = null;
+            this.CollapseButton.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.CollapseButton.OnPressedColor = System.Drawing.Color.Black;
+            this.CollapseButton.Radius = 10;
+            this.CollapseButton.Size = new System.Drawing.Size(18, 17);
+            this.CollapseButton.TabIndex = 20;
+            this.CollapseButton.Click += new System.EventHandler(this.CollapseButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 800);
+            this.Controls.Add(this.CollapseButton);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.ParametricLabel);
             this.Controls.Add(this.GraphFormulaLabel);
             this.Controls.Add(this.MenuStrip);
@@ -483,5 +551,7 @@
         private System.Windows.Forms.OpenFileDialog OpenFileDialog;
         private System.Windows.Forms.Label GraphFormulaLabel;
         private System.Windows.Forms.Label ParametricLabel;
+        private Guna.UI.WinForms.GunaAdvenceButton CloseButton;
+        private Guna.UI.WinForms.GunaAdvenceButton CollapseButton;
     }
 }

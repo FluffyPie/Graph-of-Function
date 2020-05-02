@@ -49,6 +49,7 @@
             this.CancelButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.SaveButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.DragControlMainWindow = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.DragControlTopPanel = new Guna.UI.WinForms.GunaDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -338,6 +339,10 @@
             // 
             this.DragControlMainWindow.TargetControl = this;
             // 
+            // DragControlTopPanel
+            // 
+            this.DragControlTopPanel.TargetControl = this.TopPanel;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,5 +393,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox CustomMainWindow;
         private Guna.UI.WinForms.GunaDragControl DragControlMainWindow;
+        private Guna.UI.WinForms.GunaDragControl DragControlTopPanel;
     }
 }

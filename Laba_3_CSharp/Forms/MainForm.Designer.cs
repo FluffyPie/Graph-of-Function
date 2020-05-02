@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.MainChartWindow = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.RadiusUpDownValue = new System.Windows.Forms.NumericUpDown();
             this.XRightUpDownValue = new System.Windows.Forms.NumericUpDown();
@@ -53,14 +53,18 @@
             this.ColumnY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ErrorLabel = new System.Windows.Forms.Label();
             this.PanelDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveToFileButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.openFromFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenFromFile = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingsButton = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.GraphFormulaLabel = new System.Windows.Forms.Label();
+            this.ParametricLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MainChartWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RadiusUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XRightUpDownValue)).BeginInit();
@@ -74,40 +78,45 @@
             // 
             this.MainChartWindow.BackColor = System.Drawing.Color.Transparent;
             this.MainChartWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            chartArea2.Name = "ChartArea";
-            this.MainChartWindow.ChartAreas.Add(chartArea2);
-            this.MainChartWindow.Location = new System.Drawing.Point(-16, 39);
+            chartArea7.AxisX.TitleForeColor = System.Drawing.Color.Transparent;
+            chartArea7.Name = "ChartArea";
+            this.MainChartWindow.ChartAreas.Add(chartArea7);
+            this.MainChartWindow.Location = new System.Drawing.Point(15, 75);
             this.MainChartWindow.Name = "MainChartWindow";
-            series6.ChartArea = "ChartArea";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend2";
-            series6.Name = "Series1";
-            series7.ChartArea = "ChartArea";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series7.Name = "Series2";
-            series8.ChartArea = "ChartArea";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series8.MarkerBorderWidth = 5;
-            series8.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series8.Name = "Series3";
-            series9.ChartArea = "ChartArea";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series9.Name = "Series4";
-            series10.ChartArea = "ChartArea";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series10.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series10.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            series10.MarkerSize = 7;
-            series10.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series10.Name = "Series5";
-            this.MainChartWindow.Series.Add(series6);
-            this.MainChartWindow.Series.Add(series7);
-            this.MainChartWindow.Series.Add(series8);
-            this.MainChartWindow.Series.Add(series9);
-            this.MainChartWindow.Series.Add(series10);
-            this.MainChartWindow.Size = new System.Drawing.Size(630, 470);
+            series31.ChartArea = "ChartArea";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series31.Legend = "Legend2";
+            series31.Name = "Series1";
+            series32.ChartArea = "ChartArea";
+            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series32.Legend = "Legend1";
+            series32.Name = "Series2";
+            series33.ChartArea = "ChartArea";
+            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series33.Legend = "Legend1";
+            series33.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series33.MarkerBorderWidth = 5;
+            series33.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series33.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series33.Name = "Series3";
+            series34.ChartArea = "ChartArea";
+            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series34.Legend = "Legend1";
+            series34.Name = "Series4";
+            series35.ChartArea = "ChartArea";
+            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series35.Legend = "Legend1";
+            series35.MarkerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series35.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            series35.MarkerSize = 7;
+            series35.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series35.Name = "Series5";
+            this.MainChartWindow.Series.Add(series31);
+            this.MainChartWindow.Series.Add(series32);
+            this.MainChartWindow.Series.Add(series33);
+            this.MainChartWindow.Series.Add(series34);
+            this.MainChartWindow.Series.Add(series35);
+            this.MainChartWindow.Size = new System.Drawing.Size(589, 434);
             this.MainChartWindow.TabIndex = 0;
             this.MainChartWindow.Text = "Chart";
             // 
@@ -182,6 +191,7 @@
             this.LeftXLabel.Size = new System.Drawing.Size(136, 16);
             this.LeftXLabel.TabIndex = 7;
             this.LeftXLabel.Text = "Left border of X";
+            this.LeftXLabel.MouseEnter += new System.EventHandler(this.LeftBorderMouseEnter);
             // 
             // RightXLabel
             // 
@@ -192,6 +202,7 @@
             this.RightXLabel.Size = new System.Drawing.Size(144, 16);
             this.RightXLabel.TabIndex = 8;
             this.RightXLabel.Text = "Right border of X";
+            this.RightXLabel.MouseEnter += new System.EventHandler(this.RightMouseEnter);
             // 
             // RadiusLabel
             // 
@@ -202,6 +213,7 @@
             this.RadiusLabel.Size = new System.Drawing.Size(128, 16);
             this.RadiusLabel.TabIndex = 10;
             this.RadiusLabel.Text = "Value of Radius";
+            this.RadiusLabel.MouseEnter += new System.EventHandler(this.RadiusMosueEnter);
             // 
             // StepLabel
             // 
@@ -212,6 +224,7 @@
             this.StepLabel.Size = new System.Drawing.Size(80, 16);
             this.StepLabel.TabIndex = 12;
             this.StepLabel.Text = "Step of X";
+            this.StepLabel.MouseEnter += new System.EventHandler(this.StepMouseEnter);
             // 
             // StepXUpDown
             // 
@@ -245,19 +258,18 @@
             // TableButton
             // 
             this.TableButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TableButton.Location = new System.Drawing.Point(611, 421);
+            this.TableButton.Location = new System.Drawing.Point(610, 393);
             this.TableButton.Name = "TableButton";
             this.TableButton.Size = new System.Drawing.Size(141, 45);
             this.TableButton.TabIndex = 13;
             this.TableButton.Text = "Show the Table of Values";
-            this.TableButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TableButton.UseVisualStyleBackColor = true;
             this.TableButton.Click += new System.EventHandler(this.TableButton_Click);
             // 
             // HideTableButton
             // 
             this.HideTableButton.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HideTableButton.Location = new System.Drawing.Point(611, 421);
+            this.HideTableButton.Location = new System.Drawing.Point(610, 393);
             this.HideTableButton.Name = "HideTableButton";
             this.HideTableButton.Size = new System.Drawing.Size(141, 45);
             this.HideTableButton.TabIndex = 14;
@@ -282,7 +294,7 @@
             this.TableOfValues.ReadOnly = true;
             this.TableOfValues.RowTemplate.DefaultCellStyle.Format = "N2";
             this.TableOfValues.RowTemplate.DefaultCellStyle.NullValue = null;
-            this.TableOfValues.Size = new System.Drawing.Size(745, 273);
+            this.TableOfValues.Size = new System.Drawing.Size(745, 221);
             this.TableOfValues.TabIndex = 2;
             // 
             // ColumnX
@@ -312,17 +324,7 @@
             // 
             // PanelDragControl
             // 
-            this.PanelDragControl.TargetControl = null;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            this.PanelDragControl.TargetControl = this.MenuStrip;
             // 
             // MenuStrip
             // 
@@ -339,7 +341,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SaveToFileButton,
-            this.openFromFileToolStripMenuItem,
+            this.OpenFromFile,
             this.SettingsButton,
             this.AboutButton});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -354,11 +356,12 @@
             this.SaveToFileButton.Text = "Save to File";
             this.SaveToFileButton.Click += new System.EventHandler(this.SaveToFileButton_Click);
             // 
-            // openFromFileToolStripMenuItem
+            // OpenFromFile
             // 
-            this.openFromFileToolStripMenuItem.Name = "openFromFileToolStripMenuItem";
-            this.openFromFileToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
-            this.openFromFileToolStripMenuItem.Text = "Open from File";
+            this.OpenFromFile.Name = "OpenFromFile";
+            this.OpenFromFile.Size = new System.Drawing.Size(234, 26);
+            this.OpenFromFile.Text = "Open from File";
+            this.OpenFromFile.Click += new System.EventHandler(this.OpenFromFile_Click);
             // 
             // SettingsButton
             // 
@@ -374,11 +377,48 @@
             this.AboutButton.Text = "About";
             this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // OpenFileDialog
+            // 
+            this.OpenFileDialog.FileName = "openFileDialog1";
+            // 
+            // GraphFormulaLabel
+            // 
+            this.GraphFormulaLabel.AutoSize = true;
+            this.GraphFormulaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GraphFormulaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GraphFormulaLabel.Location = new System.Drawing.Point(396, 42);
+            this.GraphFormulaLabel.Name = "GraphFormulaLabel";
+            this.GraphFormulaLabel.Size = new System.Drawing.Size(99, 40);
+            this.GraphFormulaLabel.TabIndex = 17;
+            this.GraphFormulaLabel.Text = "x = rt – r sin t;\r\ny = r – r cos t.";
+            // 
+            // ParametricLabel
+            // 
+            this.ParametricLabel.AutoSize = true;
+            this.ParametricLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ParametricLabel.Location = new System.Drawing.Point(149, 52);
+            this.ParametricLabel.Name = "ParametricLabel";
+            this.ParametricLabel.Size = new System.Drawing.Size(241, 20);
+            this.ParametricLabel.TabIndex = 18;
+            this.ParametricLabel.Text = "Parametric equation of the graph";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 800);
+            this.Controls.Add(this.ParametricLabel);
+            this.Controls.Add(this.GraphFormulaLabel);
             this.Controls.Add(this.MenuStrip);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.TableOfValues);
@@ -436,8 +476,12 @@
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SaveToFileButton;
-        private System.Windows.Forms.ToolStripMenuItem openFromFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OpenFromFile;
         private System.Windows.Forms.ToolStripMenuItem SettingsButton;
         private System.Windows.Forms.ToolStripMenuItem AboutButton;
+        private System.Windows.Forms.SaveFileDialog SaveFileDialog;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialog;
+        private System.Windows.Forms.Label GraphFormulaLabel;
+        private System.Windows.Forms.Label ParametricLabel;
     }
 }

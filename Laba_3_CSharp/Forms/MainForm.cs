@@ -284,15 +284,6 @@ namespace Laba_3_CSharp.Forms
 
         }
 
-        //private void exitbutton_click(object sender, eventargs e)
-        //{
-        //    application.exit();
-        //}
-
-        //private void collapsebutton_click(object sender, eventargs e)
-        //{
-        //    this.windowstate = formwindowstate.minimized;
-        //}
 
         private void AboutButton_Click(object sender, EventArgs e)
         {
